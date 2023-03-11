@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Netorare_Filter",
+  "version": "1.0",
+  "description": "Very easy to understand, just fuck off netorare",
+  "icons": {
+    "16": "/static/img/icon16.png",
+    "48": "/static/img/icon48.png",
+    "128": "/static/img/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "/static/img/pure_love.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [ 
+    "http://*/*", 
+    "https://*/*", 
+    "storage",
+    "background",
+    "tabs",
+    "activeTab",
+    "storage",
+    "webRequest" 
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["*://nhentai.net/*", "*://www.nhentai.net/*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["backend.js"]
+  }
+}
