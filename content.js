@@ -1,5 +1,6 @@
 const mangaList = document.querySelectorAll('.gallery');
 const netorare = '8653';
+const netorareTag = ['Netorare', 'NTR', 'ntr', 'netorare', 'Ntr'];
 let ntrCheck = true;
 
 function getCookie() {
@@ -14,6 +15,14 @@ function hideNetorare() {
         mangaList.forEach((manga) => {
         if (manga.getAttribute('data-tags').includes(netorare)) {
             manga.style.display = style;
+        } else {
+            let title = manga.lastChild.lastChild.textContent
+            let regList = netorareTag.map((tag) => new RegExp(tag, 'i'));
+            regList.forEach((reg) => {
+                if (reg.test(title)) {
+                    manga.style.display = style;
+                }
+            });
         }
     })};
     if (!ntrCheck) {

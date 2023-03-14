@@ -6,7 +6,10 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action == 'hasCookie') {
-        sendResponse({cookie: hasCookie});
+        chrome.runtime.sendMessage({ hasCookie: 'query' }, (response) => {
+            hasCookie = response.cookie;
+            sendResponse({cookie: hasCookie});
+        });
     }
 });
 
