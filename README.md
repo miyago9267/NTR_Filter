@@ -2,18 +2,35 @@
 
 ## What is this?
 
-純愛戰士專用，將nhentai的所有帶有NTR標籤的本子過濾掉，讓你成為一個純潔的純愛戰士。
+純愛戰士專用，將 nhentai 上所有帶有 NTR 標籤的本子過濾掉，守護你的純愛視界。
 
 ## How to use?
 
-0. 確保你有一個Chromium瀏覽器。
-1. 下載本專案的資料夾。
-2. 到[Browser://extensions](chrome://extensions)，開啟開發者模式(連結開頭的Browser請根據自身瀏覽器做調整)。
-3. 點擊載入未封裝項目，選擇本專案的資料夾，Edge中好像叫載入解壓縮。  
-    1. 某些瀏覽器似乎會將資料夾中的檔案自動解壓縮，這樣的話請將資料夾壓縮成zip檔案，再載入。
-4. 安裝完成，開啟nhentai，應該就會自動過濾掉NTR標籤的本子了。
+### Chrome Web Store
+
+1. 安裝本擴充功能（參見下方 Chrome Web Store 連結）。
+2. 開啟 nhentai 網站，擴充功能會自動過濾標記為 NTR 的本子。
+3. 點擊擴充功能圖示，可自行開關過濾功能。
+
+[N-Hentai Netorare Filter on Chrome Web Store](https://chrome.google.com/webstore/detail/ntr-filter/eoiiigaebpifbdmmohpcobbbokpgmhgi)
+
+### 自行部署（開發者模式）
+
+1. 確保你有一個 Chromium 瀏覽器。
+2. 下載本專案的資料夾。
+3. 開啟 `chrome://extensions`，啟用「開發者模式」。
+4. 點擊「載入未封裝項目」，選擇本專案資料夾。
+   - 某些瀏覽器會自動解壓縮檔案，若載入失敗，請手動將資料夾壓縮成 zip 再載入。
+5. 安裝完成後，開啟 nhentai，即可自動過濾 NTR 標籤。
+
+## Features
+
+- 自動隱藏 NTR 標籤本子
+- 一鍵開關過濾功能
+- 全本地端運作，無需伺服器
+- 不蒐集、不傳送任何資料
 
 ## Todo
 
-- [ ] 增加更多過濾條件(如更多標籤、作者、標題)
-- [ ] Todo
+- [ ] 增加更多過濾條件（標籤、作者、標題）
+- [ ] 其他功能開發中
