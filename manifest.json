@@ -1,35 +1,41 @@
 {
-  "manifest_version": 2,
-  "name": "Netorare_Filter",
-  "version": "1.0",
-  "description": "Very easy to understand, just fuck off netorare",
+  "manifest_version": 3,
+  "name": "N-Hentai Netorare Filter",
+  "version": "2.0.0",
+  "description": "Simple extension to filter netorare content on nhentai.",
   "icons": {
-    "16": "/static/img/icon16.png",
-    "48": "/static/img/icon48.png",
-    "128": "/static/img/icon128.png"
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
   },
-  "browser_action": {
-    "default_icon": "/static/img/pure_love.png",
+  "action": {
+    "default_icon": {
+      "16": "img/pure_love.png",
+      "32": "img/pure_love.png",
+      "48": "img/pure_love.png",
+      "128": "img/pure_love.png"
+    },
     "default_popup": "popup.html"
   },
-  "permissions": [ 
-    "http://*/*", 
-    "https://*/*", 
+  "permissions": [
     "storage",
-    "background",
     "tabs",
     "activeTab",
-    "storage",
-    "webRequest" 
+    "webRequest"
   ],
   "content_scripts": [
     {
-      "all_frames": true,
-      "matches": ["*://nhentai.net/*", "*://www.nhentai.net/*/*"],
-      "js": ["content.js"]
+      "matches": [
+        "*://nhentai.net/*",
+        "*://www.nhentai.net/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
     }
   ],
   "background": {
-    "scripts": ["backend.js"]
+    "service_worker": "backend.js"
   }
 }

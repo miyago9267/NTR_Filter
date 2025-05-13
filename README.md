@@ -1,8 +1,11 @@
-# Netorare Filter for Nhentai
+# N-Hentai Netorare Filter
+
 ## What is this?
+
 純愛戰士專用，將nhentai的所有帶有NTR標籤的本子過濾掉，讓你成為一個純潔的純愛戰士。
 
 ## How to use?
+
 0. 確保你有一個Chromium瀏覽器。
 1. 下載本專案的資料夾。
 2. 到[Browser://extensions](chrome://extensions)，開啟開發者模式(連結開頭的Browser請根據自身瀏覽器做調整)。
@@ -11,5 +14,6 @@
 4. 安裝完成，開啟nhentai，應該就會自動過濾掉NTR標籤的本子了。
 
 ## Todo
+
 - [ ] 增加更多過濾條件(如更多標籤、作者、標題)
 - [ ] Todo
